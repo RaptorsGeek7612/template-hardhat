@@ -2,7 +2,7 @@
 name: hardhat
 description: Use when working with Hardhat 3 projects — writing or modifying Solidity tests, TypeScript tests, or any code touching hardhat.config.ts, the `hardhat` import, or `network.create()`. Covers test-layer choice, forge-std cheatcodes, the network connection API, `networkHelpers`, and the compile-then-typecheck workflow. For toolbox-specific guidance (clients, contract calls, assertions), also load the matching `hardhat-toolbox-*` skill.
 metadata:
-  package: "hardhat"
+    package: "hardhat"
 ---
 
 # Hardhat 3
@@ -43,42 +43,42 @@ import { Test } from "forge-std/Test.sol";
 import { Counter } from "./Counter.sol";
 
 contract CounterTest is Test {
-  Counter counter;
+    Counter counter;
 
-  function setUp() public {
-    counter = new Counter();
-  }
-
-  function test_InitialValueIsZero() public view {
-    assertEq(counter.x(), 0);
-  }
-
-  function test_IncByIncreasesByAmount() public {
-    counter.incBy(3);
-    assertEq(counter.x(), 3);
-  }
-
-  // Fuzz test: Hardhat runs this with many random inputs automatically
-  function testFuzz_Inc(uint8 x) public {
-    for (uint8 i = 0; i < x; i++) {
-      counter.inc();
+    function setUp() public {
+        counter = new Counter();
     }
-    require(counter.x() == x, "Value after calling inc x times should be x");
-  }
+
+    function test_InitialValueIsZero() public view {
+        assertEq(counter.x(), 0);
+    }
+
+    function test_IncByIncreasesByAmount() public {
+        counter.incBy(3);
+        assertEq(counter.x(), 3);
+    }
+
+    // Fuzz test: Hardhat runs this with many random inputs automatically
+    function testFuzz_Inc(uint8 x) public {
+        for (uint8 i = 0; i < x; i++) {
+            counter.inc();
+        }
+        require(counter.x() == x, "Value after calling inc x times should be x");
+    }
 }
 ```
 
 The `vm` object (from `forge-std/Test.sol`) exposes cheatcodes for EVM state manipulation. Commonly used ones:
 
-| Cheatcode | Effect |
-| --- | --- |
-| `vm.prank(addr)` | Sets `msg.sender` for the next call only |
-| `vm.startPrank(addr)` / `vm.stopPrank()` | Sets `msg.sender` for a range of calls |
-| `vm.deal(addr, amount)` | Sets an account's ETH balance |
-| `vm.warp(timestamp)` | Sets `block.timestamp` |
-| `vm.roll(blockNum)` | Sets `block.number` |
-| `vm.expectRevert(...)` | Asserts the next call reverts |
-| `vm.expectEmit(...)` | Asserts the next call emits a specific event |
+| Cheatcode                                | Effect                                       |
+| ---------------------------------------- | -------------------------------------------- |
+| `vm.prank(addr)`                         | Sets `msg.sender` for the next call only     |
+| `vm.startPrank(addr)` / `vm.stopPrank()` | Sets `msg.sender` for a range of calls       |
+| `vm.deal(addr, amount)`                  | Sets an account's ETH balance                |
+| `vm.warp(timestamp)`                     | Sets `block.timestamp`                       |
+| `vm.roll(blockNum)`                      | Sets `block.number`                          |
+| `vm.expectRevert(...)`                   | Asserts the next call reverts                |
+| `vm.expectEmit(...)`                     | Asserts the next call emits a specific event |
 
 ## TypeScript tests and the network connection
 
@@ -125,8 +125,8 @@ await networkHelpers.setNextBlockBaseFeePerGas(baseFee);
 // viem.deployContract, an ethers ContractFactory) — see the matching
 // hardhat-toolbox-* skill.
 async function deployCounter() {
-  // ... toolbox-specific deploy ...
-  return { counter };
+    // ... toolbox-specific deploy ...
+    return { counter };
 }
 
 const { counter } = await networkHelpers.loadFixture(deployCounter);

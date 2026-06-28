@@ -2,7 +2,7 @@
 name: hardhat-toolbox-mocha-ethers
 description: Use alongside the `hardhat` skill when the project depends on `@nomicfoundation/hardhat-toolbox-mocha-ethers`. Covers the ethers helpers exposed on `network.create()`, contract interaction (`ethers.deployContract`, calling functions, `connect`), TypeChain-typed contract instances, and the chai matchers from `@nomicfoundation/hardhat-ethers-chai-matchers` (`.to.emit`, `.to.be.revertedWith*`, `.to.changeEtherBalance(s)`).
 metadata:
-  package: "@nomicfoundation/hardhat-toolbox-mocha-ethers"
+    package: "@nomicfoundation/hardhat-toolbox-mocha-ethers"
 ---
 
 # Hardhat toolbox: ethers + Mocha
@@ -18,7 +18,7 @@ import { network } from "hardhat";
 const { ethers, networkHelpers } = await network.create();
 
 describe("Counter", function () {
-  // ...
+    // ...
 });
 ```
 
@@ -67,8 +67,8 @@ Inside a `loadFixture` setup function (see the `hardhat` skill for the surroundi
 
 ```ts
 async function deployCounterFixture() {
-  const counter = await ethers.deployContract("Counter");
-  return { counter };
+    const counter = await ethers.deployContract("Counter");
+    return { counter };
 }
 
 const { counter } = await networkHelpers.loadFixture(deployCounterFixture);
@@ -93,15 +93,12 @@ import { expect } from "chai";
 // Reverts
 await expect(counter.connect(banned).inc()).to.revert(ethers);
 await expect(counter.connect(banned).inc()).to.be.revertedWith(
-  "only the owner can increment the counter",
+    "only the owner can increment the counter",
 );
-await expect(counter.connect(banned).inc()).to.be.revertedWithCustomError(
-  counter,
-  "Unauthorized",
-);
+await expect(counter.connect(banned).inc()).to.be.revertedWithCustomError(counter, "Unauthorized");
 await expect(counter.connect(banned).inc())
-  .to.be.revertedWithCustomError(counter, "Unauthorized")
-  .withArgs(banned.address);
+    .to.be.revertedWithCustomError(counter, "Unauthorized")
+    .withArgs(banned.address);
 
 // Events
 await expect(counter.inc()).to.emit(counter, "Increment");
@@ -109,11 +106,7 @@ await expect(counter.inc()).to.emit(counter, "Increment").withArgs(1n);
 
 // ETH balance changes (positive = received, negative = spent, before gas)
 await expect(game.claim()).to.changeEtherBalance(ethers, winner, PRIZE);
-await expect(game.claim()).to.changeEtherBalances(
-  ethers,
-  [winner, loser],
-  [PRIZE, -STAKE],
-);
+await expect(game.claim()).to.changeEtherBalances(ethers, [winner, loser], [PRIZE, -STAKE]);
 ```
 
 For plain assertions (equality, arrays, types), use `expect` from chai directly without the Ethereum matchers.
