@@ -26,6 +26,7 @@ contracts/        Solidity source (Voting.sol) and Foundry-style unit tests (Vot
 test/             TypeScript integration tests (Voting.ts) and shared fixtures
 ignition/         Hardhat Ignition deployment module
 scripts/          Standalone demo script run with `hardhat run`
+examples/         Walkthroughs and usage examples (see examples/README.md)
 hardhat.config.ts
 ```
 
