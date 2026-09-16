@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Voting smart contract using Hardhat 3 and OpenZeppelin.",
     "type": "module",
+    "packageManager": "pnpm@12.4.2",
     "scripts": {
         "compile": "hardhat compile",
         "test": "hardhat test",
