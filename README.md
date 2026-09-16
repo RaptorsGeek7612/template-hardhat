@@ -1,5 +1,7 @@
 # Voting (Hardhat 3 + ethers)
 
+[![CI](https://github.com/RaptorsGeek7612/template-hardhat/actions/workflows/ci.yml/badge.svg)](https://github.com/RaptorsGeek7612/template-hardhat/actions/workflows/ci.yml)
+
 A whitelisted on-chain voting system built with Hardhat 3, ethers.js, and OpenZeppelin's `Ownable`.
 
 The `Voting` contract drives voters through a fixed workflow:
