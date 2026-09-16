@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Added
+
+- `CODE_OF_CONDUCT.md` (Contributor Covenant 2.1).
+- Dependabot config for `npm` and `github-actions` dependency updates.
+- Coverage upload to Codecov in CI, plus a codecov badge in the README. (Requires enabling this repo on codecov.io — the badge and upload work tokenless for public repos, but may need a `CODECOV_TOKEN` secret for reliability.)
+
 ## [0.1.6] - 2026-09-16
 
 ### Added
