@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [0.1.5] - 2026-09-16
+
+### Added
+
+- Automated tagging and releasing: a `release` job in CI now creates a git tag and GitHub release automatically whenever a push to `master` changes `CHANGELOG.md` and introduces a new version section that isn't tagged yet. It waits for the `test` job to pass first, and pulls the release notes straight from that version's CHANGELOG section. Bumping the version is still a manual, deliberate edit — only the tag/release mechanics are automated.
+
 ## [0.1.4] - 2026-09-16
 
 ### Added
@@ -16,14 +22,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - A `Coverage` step in CI (`hardhat test --coverage`).
 - GitHub repo topics (`hardhat`, `solidity`, `ethereum`, `web3`, `voting`, `template`, `smart-contracts`) for discoverability.
 - Branch protection on `master`: the CI check must pass before merging; force-pushes and branch deletion are blocked.
+- `examples/` directory with a README of usage walkthroughs (demo workflow script, Ignition deployment, tests as documentation).
 
 ### Changed
 
 - Deleted the stray `main` branch (an unused GitHub-generated stub) and made `master` the default branch. CI now only triggers on `master`.
-
-### Added
-
-- `examples/` directory with a README of usage walkthroughs (demo workflow script, Ignition deployment, tests as documentation).
 
 ## [0.1.3] - 2026-09-16
 

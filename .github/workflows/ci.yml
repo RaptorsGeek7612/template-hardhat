@@ -38,3 +38,73 @@ jobs:
 
       - name: Coverage
         run: pnpm exec hardhat test --coverage
+
+  release:
+    needs: test
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check if CHANGELOG.md changed
+        id: changed
+        run: |
+          if [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          elif git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" | grep -qx CHANGELOG.md; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Determine release version and notes
+        if: steps.changed.outputs.changed == 'true'
+        id: changelog
+        run: |
+          VERSION_LINE=$(grep -m1 -E '^## \[[0-9]+\.[0-9]+\.[0-9]+\] - ' CHANGELOG.md || true)
+          if [ -z "$VERSION_LINE" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          VERSION=$(echo "$VERSION_LINE" | sed -E 's/^## \[([0-9]+\.[0-9]+\.[0-9]+)\].*/\1/')
+          TAG="v$VERSION"
+          if git rev-parse "$TAG" >/dev/null 2>&1; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          PREV_TAG=$(git tag --sort=-v:refname | head -1 || true)
+          awk -v ver="$VERSION" '
+            BEGIN { printing=0 }
+            /^## \[/ {
+              if (printing) exit
+              if ($0 ~ ("\\[" ver "\\]")) { printing=1; next }
+              next
+            }
+            printing { print }
+          ' CHANGELOG.md > release_notes.md
+          if [ -n "$PREV_TAG" ]; then
+            {
+              echo ""
+              echo "**Full Changelog**: https://github.com/${{ github.repository }}/compare/${PREV_TAG}...${TAG}"
+            } >> release_notes.md
+          fi
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "skip=false" >> "$GITHUB_OUTPUT"
+
+      - name: Create tag and release
+        if: steps.changed.outputs.changed == 'true' && steps.changelog.outputs.skip == 'false'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag -a "${{ steps.changelog.outputs.tag }}" -m "${{ steps.changelog.outputs.tag }}"
+          git push origin "${{ steps.changelog.outputs.tag }}"
+          gh release create "${{ steps.changelog.outputs.tag }}" \
+            --title "${{ steps.changelog.outputs.tag }}" \
+            --notes-file release_notes.md
