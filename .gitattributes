@@ -1,0 +1,5 @@
+# Normalize line endings to LF for everyone, regardless of OS/editor
+* text=auto eol=lf
+
+# Don't count the lockfile in GitHub's language stats or line-by-line diffs
+pnpm-lock.yaml linguist-generated=true

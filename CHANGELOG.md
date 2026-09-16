@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Added
+
+- `.gitattributes` (normalize line endings to LF, mark `pnpm-lock.yaml` as generated).
+
 ## [0.1.2] - 2026-09-16
 
 ### Added
