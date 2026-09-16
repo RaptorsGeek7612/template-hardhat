@@ -6,12 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [0.1.4] - 2026-09-16
+
 ### Added
 
 - GitHub issue templates (bug report, feature request).
 - `SECURITY.md`, including a note on the transitive dev-dependency advisories `pnpm audit` reports.
 - License badge in the README.
 - A `Coverage` step in CI (`hardhat test --coverage`).
+- GitHub repo topics (`hardhat`, `solidity`, `ethereum`, `web3`, `voting`, `template`, `smart-contracts`) for discoverability.
+- Branch protection on `master`: the CI check must pass before merging; force-pushes and branch deletion are blocked.
 
 ### Changed
 
