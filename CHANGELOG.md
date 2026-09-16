@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Added
+
+- GitHub issue templates (bug report, feature request).
+- `SECURITY.md`, including a note on the transitive dev-dependency advisories `pnpm audit` reports.
+- License badge in the README.
+- A `Coverage` step in CI (`hardhat test --coverage`).
+
 ### Changed
 
 - Deleted the stray `main` branch (an unused GitHub-generated stub) and made `master` the default branch. CI now only triggers on `master`.

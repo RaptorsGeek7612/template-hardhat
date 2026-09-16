@@ -35,3 +35,6 @@ jobs:
 
       - name: Test
         run: pnpm test
+
+      - name: Coverage
+        run: pnpm exec hardhat test --coverage
