@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Changed
+
+- Deleted the stray `main` branch (an unused GitHub-generated stub) and made `master` the default branch. CI now only triggers on `master`.
+
 ### Added
 
 - `examples/` directory with a README of usage walkthroughs (demo workflow script, Ignition deployment, tests as documentation).
