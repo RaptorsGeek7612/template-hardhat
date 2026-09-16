@@ -1,57 +1,79 @@
-# Sample Hardhat 3 Project (`mocha` and `ethers`)
+# Voting (Hardhat 3 + ethers)
 
-This project showcases a Hardhat 3 project using `mocha` for tests and the `ethers` library for Ethereum interactions.
+A whitelisted on-chain voting system built with Hardhat 3, ethers.js, and OpenZeppelin's `Ownable`.
 
-To learn more about Hardhat 3, please visit the [Getting Started guide](https://hardhat.org/docs/getting-started#getting-started-with-hardhat-3). To share your feedback, join our [Hardhat 3](https://hardhat.org/hardhat3-telegram-group) Telegram group or [open an issue](https://github.com/NomicFoundation/hardhat/issues/new) in our GitHub issue tracker.
+The `Voting` contract drives voters through a fixed workflow:
 
-## Project Overview
+1. `RegisteringVoters` — the owner whitelists voter addresses.
+2. `ProposalsRegistrationStarted` — whitelisted voters submit proposals.
+3. `ProposalsRegistrationEnded`
+4. `VotingSessionStarted` — whitelisted voters cast one vote each.
+5. `VotingSessionEnded`
+6. `VotesTallied` — the owner tallies votes; the most-voted proposal wins.
 
-This example project includes:
+Only the owner can advance the workflow and register voters; only registered voters can submit proposals, vote, or read voter/proposal data.
 
-- A simple Hardhat configuration file.
-- Foundry-compatible Solidity unit tests.
-- TypeScript integration tests using `mocha` and ethers.js
-- Examples demonstrating how to connect to different types of networks, including locally simulating OP mainnet.
+## Project layout
+
+```
+contracts/        Solidity source (Voting.sol) and Foundry-style unit tests (Voting.t.sol)
+test/             TypeScript integration tests (Voting.ts) and shared fixtures
+ignition/         Hardhat Ignition deployment module
+scripts/          Standalone demo script run with `hardhat run`
+hardhat.config.ts
+```
+
+## Setup
+
+This project uses **pnpm**.
+
+```shell
+pnpm install
+cp .env.example .env   # fill in SEPOLIA_RPC_URL / SEPOLIA_PRIVATE_KEY to deploy to Sepolia
+```
 
 ## Usage
 
-### Running Tests
-
-To run all the tests in the project, execute the following command:
+### Running tests
 
 ```shell
-npx hardhat test
+pnpm test            # Solidity + TypeScript tests
+pnpm exec hardhat test solidity
+pnpm exec hardhat test mocha
 ```
 
-You can also selectively run the Solidity or `mocha` tests:
+### Compiling, linting, formatting
 
 ```shell
-npx hardhat test solidity
-npx hardhat test mocha
+pnpm run compile
+pnpm run lint
+pnpm run format
+pnpm run check    # lint + compile + test
 ```
 
-### Make a deployment to Sepolia
+### Running the demo workflow
 
-This project includes an example Ignition module to deploy the contract. You can deploy this module to a locally simulated chain or to Sepolia.
-
-To run the deployment to a local chain:
+A standalone script deploys the contract and walks through the full voting workflow (register voters, submit proposals, vote, tally) on an ephemeral local network:
 
 ```shell
-npx hardhat ignition deploy ignition/modules/Counter.ts
+pnpm exec hardhat run scripts/run-workflow.ts
 ```
 
-To run the deployment to Sepolia, you need an account with funds to send the transaction. The provided Hardhat configuration includes a Configuration Variable called `SEPOLIA_PRIVATE_KEY`, which you can use to set the private key of the account you want to use.
+### Deploying
 
-You can set the `SEPOLIA_PRIVATE_KEY` variable using the `hardhat-keystore` plugin or by setting it as an environment variable.
-
-To set the `SEPOLIA_PRIVATE_KEY` config variable using `hardhat-keystore`:
+To deploy locally (ephemeral, state is discarded afterwards):
 
 ```shell
-npx hardhat keystore set SEPOLIA_PRIVATE_KEY
+pnpm exec hardhat ignition deploy ignition/modules/Voting.ts
 ```
 
-After setting the variable, you can run the deployment with the Sepolia network:
+To deploy to Sepolia, set `SEPOLIA_RPC_URL` and `SEPOLIA_PRIVATE_KEY` in `.env` (see `.env.example`), then run:
 
 ```shell
-npx hardhat ignition deploy --network sepolia ignition/modules/Counter.ts
+pnpm exec hardhat ignition deploy --network sepolia ignition/modules/Voting.ts
 ```
+
+## Docs
+
+- Hardhat 3 — https://hardhat.org/llms.txt
+- ethers.js — https://docs.ethers.org/v6/
