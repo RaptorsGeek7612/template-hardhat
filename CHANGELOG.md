@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-09-16
+
 ### Changed
 
 - Replaced the generic `Counter` scaffold contract with `Voting.sol`, a whitelisted on-chain voting system (`Ownable`-gated workflow, OpenZeppelin).
@@ -25,7 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - Empty scaffold directories left over from project init (`docs/`, `deployments/`, `test/constants/`, `test/helpers/`).
 
-## [0.1.0] - 2026-06-28
+## [0.0.0] - 2026-06-28 (untagged scaffold)
 
 ### Added
 
