@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [0.1.7] - 2026-09-16
+
 ### Changed
 
 - Bumped `typescript` to ~7.0.2 and `@types/node` to ^26.5.1 (both major version bumps from Dependabot; verified `tsc --noEmit` and the full test suite still pass).
