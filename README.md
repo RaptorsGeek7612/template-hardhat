@@ -79,3 +79,7 @@ pnpm exec hardhat ignition deploy --network sepolia ignition/modules/Voting.ts
 
 - Hardhat 3 — https://hardhat.org/llms.txt
 - ethers.js — https://docs.ethers.org/v6/
+
+## License
+
+MIT — see [LICENSE](LICENSE).
