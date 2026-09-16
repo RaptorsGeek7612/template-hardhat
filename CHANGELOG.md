@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Fixed
+
+- The Codecov coverage upload was silently failing in CI (`"Token required - not valid tokenless upload"` — Codecov no longer accepts tokenless uploads without the repo first being activated on codecov.io, which needs a human login we can't automate). Replaced it with a self-hosted coverage badge: a `coverage-badge` CI job computes the line-coverage percentage from the lcov report and publishes it as a shields.io endpoint JSON file on an orphan `badges` branch — no third-party account or token required. The README badge now reads from that.
+
 ## [0.1.7] - 2026-09-16
 
 ### Changed
