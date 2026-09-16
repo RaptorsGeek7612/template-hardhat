@@ -81,6 +81,8 @@ To deploy to Sepolia, set `SEPOLIA_RPC_URL` and `SEPOLIA_PRIVATE_KEY` in `.env` 
 pnpm exec hardhat ignition deploy --network sepolia ignition/modules/Voting.ts
 ```
 
+See [examples/README.md](examples/README.md#to-sepolia) for a full worked example, including expected output.
+
 ## Docs
 
 - Hardhat 3 — https://hardhat.org/llms.txt

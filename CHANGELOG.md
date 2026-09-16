@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Added
+
+- A full worked Sepolia deployment example (with expected Ignition output) in `examples/README.md`, linked from the README's Sepolia section.
+
 ## [0.1.5] - 2026-09-16
 
 ### Added

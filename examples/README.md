@@ -23,7 +23,44 @@ Winning proposal #2: "Reduce commute time" with 2 vote(s)
 
 ## Deploying with Ignition
 
-[`ignition/modules/Voting.ts`](../ignition/modules/Voting.ts) is the minimal deployment module — it just deploys the contract with no constructor arguments. See the [Deploying](../README.md#deploying) section of the main README for local and Sepolia usage.
+[`ignition/modules/Voting.ts`](../ignition/modules/Voting.ts) is the minimal deployment module — it just deploys the contract with no constructor arguments.
+
+### Locally (ephemeral)
+
+```shell
+pnpm exec hardhat ignition deploy ignition/modules/Voting.ts
+```
+
+### To Sepolia
+
+```shell
+cp .env.example .env
+# edit .env: set SEPOLIA_RPC_URL and SEPOLIA_PRIVATE_KEY
+
+pnpm exec hardhat ignition deploy --network sepolia ignition/modules/Voting.ts
+```
+
+Expected output:
+
+```
+Hardhat Ignition 🚀
+
+Deploying [ VotingModule ]
+
+Batch #1
+  Executing VotingModule#Voting...
+
+Batch #1
+  Executed VotingModule#Voting
+
+[ VotingModule ] successfully deployed 🚀
+
+Deployed Addresses
+
+VotingModule#Voting - 0x1234567890abcdef1234567890abcdef12345678
+```
+
+Ignition records the deployment under `ignition/deployments/chain-11155111/` (Sepolia's chain ID), so re-running the same command later reuses the existing contract instead of redeploying. Look the address up at `https://sepolia.etherscan.io/address/<the address above>`, or interact with it the same way as [the local demo script](#full-voting-workflow) by pointing `network.create()` at `"sepolia"` instead of the default network.
 
 ## Reading contract tests as usage examples
 
