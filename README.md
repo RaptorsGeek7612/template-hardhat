@@ -3,7 +3,10 @@
 [![CI](https://github.com/RaptorsGeek7612/template-hardhat/actions/workflows/ci.yml/badge.svg)](https://github.com/RaptorsGeek7612/template-hardhat/actions/workflows/ci.yml)
 [![Latest release](https://img.shields.io/github/v/release/RaptorsGeek7612/template-hardhat)](https://github.com/RaptorsGeek7612/template-hardhat/releases/latest)
 
-A whitelisted on-chain voting system built with Hardhat 3, ethers.js, and OpenZeppelin's `Ownable`.
+A whitelisted on-chain voting system built with Hardhat 3, ethers.js, and OpenZeppelin's `Ownable`. This is the Hardhat counterpart of a pair of framework-pure starter templates implementing the same `Voting` contract:
+
+- Hardhat (this repo) — https://github.com/RaptorsGeek7612/template-hardhat
+- Foundry — https://github.com/RaptorsGeek7612/template-foundry
 
 The `Voting` contract drives voters through a fixed workflow:
 
