@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Changed
+
+- Bumped `typescript` to ~7.0.2 and `@types/node` to ^26.5.1 (both major version bumps from Dependabot; verified `tsc --noEmit` and the full test suite still pass).
+- Bumped CI actions: `actions/checkout` v4→v7, `actions/setup-node` v4→v7, `pnpm/action-setup` v4→v6, `codecov/codecov-action` v4→v6.
+
 ### Added
 
 - `CODE_OF_CONDUCT.md` (Contributor Covenant 2.1).
