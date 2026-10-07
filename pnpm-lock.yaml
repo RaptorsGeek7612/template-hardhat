@@ -175,13 +175,13 @@ importers:
     devDependencies:
       '@nomicfoundation/hardhat-ethers':
         specifier: ^4.0.13
-        version: 4.0.15(hardhat@3.16.0)
+        version: 4.0.15(hardhat@3.18.1)
       '@nomicfoundation/hardhat-ignition':
         specifier: ^3.1.7
-        version: 3.1.8(@nomicfoundation/hardhat-verify@3.1.0(hardhat@3.16.0))(hardhat@3.16.0)
+        version: 3.1.8(@nomicfoundation/hardhat-verify@3.1.0(hardhat@3.18.1))(hardhat@3.18.1)
       '@nomicfoundation/hardhat-toolbox-mocha-ethers':
         specifier: ^3.0.7
-        version: 3.0.7(7386eeacfc05906dce3df36e360779c9)
+        version: 3.0.7(ba6b52f0d5bd2c94700604715cdaa793)
       '@types/chai':
         specifier: ^5.2.3
         version: 5.2.3
@@ -204,8 +204,8 @@ importers:
         specifier: github:foundry-rs/forge-std#v1.16.2
         version: https://codeload.github.com/foundry-rs/forge-std/tar.gz/bf647bd6046f2f7da30d0c2bf435e5c76a780c1b
       hardhat:
-        specifier: ^3.9.0
-        version: 3.16.0
+        specifier: ^3.18.1
+        version: 3.18.1
       mocha:
         specifier: ^11.7.6
         version: 11.8.0
@@ -464,15 +464,27 @@ packages:
     resolution: {integrity: sha512-rONPWMC7PeExE077uLE4oqWrZ1IvAfz3oH9LibVAcVCopJiA9R62uavnbEzdkVmJYI6M6Zgkbeb07+tWjlq2XA==}
     engines: {node: ^14.21.3 || >=16}
 
+  '@noble/ciphers@1.3.0':
+    resolution: {integrity: sha512-2I0gnIVPtfnMw9ee9h1dJG7tp81+8Ob3OJb3Mv37rx5L40/b0i7djjCVvGOVqc9AEIQyvyu1i6ypKdFw8R8gQw==}
+    engines: {node: ^14.21.3 || >=16}
+
+  '@noble/ciphers@2.2.0':
+    resolution: {integrity: sha512-Z6pjIZ/8IJcCGzb2S/0Px5J81yij85xASuk1teLNeg75bfT07MV3a/O2Mtn1I2se43k3lkVEcFaR10N4cgQcZA==}
+    engines: {node: '>= 20.19.0'}
+
   '@noble/curves@1.2.0':
     resolution: {integrity: sha512-oYclrNgRaM9SsBUBVbb8M6DTV7ZHRTKugureoYEncY5c65HOmRzvSiTE3y5CYaPYJA/GVkrhXEoF0M3Ya9PMnw==}
 
   '@noble/curves@1.4.2':
     resolution: {integrity: sha512-TavHr8qycMChk8UwMld0ZDRvatedkzWfH8IiaeGCfymOP5i0hSCozz9vHOL0nkwk7HRMlFnAiKpS2jrUmSybcw==}
 
-  '@noble/curves@1.8.2':
-    resolution: {integrity: sha512-vnI7V6lFNe0tLAuJMu+2sX+FcL14TaCWy1qiczg1VwRmPrpQCdq5ESXQMqUc2tluRNf6irBXrWbl1mGN8uaU/g==}
+  '@noble/curves@1.9.0':
+    resolution: {integrity: sha512-7YDlXiNMdO1YZeH6t/kvopHHbIZzlxrCV9WLqCY6QhcXOoXiNCMDqJIglZ9Yjx5+w7Dz30TITFrlTjnRg7sKEg==}
     engines: {node: ^14.21.3 || >=16}
+
+  '@noble/curves@2.2.0':
+    resolution: {integrity: sha512-T/BoHgFXirb0ENSPBquzX0rcjXeM6Lo892a2jlYJkqk83LqZx0l1Of7DzlKJ6jkpvMrkHSnAcgb5JegL8SeIkQ==}
+    engines: {node: '>= 20.19.0'}
 
   '@noble/hashes@1.3.2':
     resolution: {integrity: sha512-MVC8EAQp7MvEcm30KWENFjgR+Mkmf+D189XJTkFIlwohU5hcBbn1ZkKq7KVTi2Hme3PMGF390DaL52beVrIihQ==}
@@ -486,62 +498,69 @@ packages:
     resolution: {integrity: sha512-B8XBPsn4vT/KJAGqDzbwztd+6Yte3P4V7iafm24bxgDe/mlRuK6xmWPuCNrKt2vDafZ8MfJLlchDG/vYafQEjQ==}
     engines: {node: ^14.21.3 || >=16}
 
-  '@noble/hashes@1.7.2':
-    resolution: {integrity: sha512-biZ0NUSxyjLLqo6KxEJ1b+C2NAx0wtDoFvCaXHGgUkeHzf3Xc1xKumFKREuT7f7DARNZ/slvYUwFG6B0f2b6hQ==}
+  '@noble/hashes@1.8.0':
+    resolution: {integrity: sha512-jCs9ldd7NwzpgXDIf6P3+NrHh9/sD6CQdxHyjQI+h/6rDNo88ypBxxz45UDuZHz9r3tNz7N/VInSVoVdtXEI4A==}
     engines: {node: ^14.21.3 || >=16}
 
-  '@nomicfoundation/edr-darwin-arm64@0.19.0':
-    resolution: {integrity: sha512-Yo2MkZoM85zkasUPJDj8l8QezPdrMzqQUJhp78TUQDq8FQXhdJTZ39k3Jax5OQ3hqjMhMkrGbctn9w9h6mEusg==}
+  '@noble/hashes@2.2.0':
+    resolution: {integrity: sha512-IYqDGiTXab6FniAgnSdZwgWbomxpy9FtYvLKs7wCUs2a8RkITG+DFGO1DM9cr+E3/RgADRpFjrKVaJ1z6sjtEg==}
+    engines: {node: '>= 20.19.0'}
+
+  '@nomicfoundation/edr-darwin-arm64@0.22.0':
+    resolution: {integrity: sha512-1IdPHw4eMCii2giwPuYxyeIwYol5rBI6cVnPIlcXSiWg+jnjFE12RGfw18kzXu+nka2hK9E9IV3M7iZrDfdsbg==}
     engines: {node: '>= 22'}
     cpu: [arm64]
     os: [darwin]
 
-  '@nomicfoundation/edr-darwin-x64@0.19.0':
-    resolution: {integrity: sha512-RC7RVX1iATg9SlJTnKD57A8jRBIBiUKmAdi8maBN4zhmK5Z7aAeiwdQX6VjPOum3c2Mdpp2Q7JfooJxxF6bCvw==}
+  '@nomicfoundation/edr-darwin-x64@0.22.0':
+    resolution: {integrity: sha512-s2GsGmYQsvBNZ5TOohsS65wliUNL6MVlhDSKn/RF+hLd2GE5w9etwnfIsr9pa619/Zsdu9QxRpT+JjarhLWW8Q==}
     engines: {node: '>= 22'}
     cpu: [x64]
     os: [darwin]
 
-  '@nomicfoundation/edr-linux-arm64-gnu@0.19.0':
-    resolution: {integrity: sha512-vhEKPUomGwM0Lsjpwd5q/Jc6yE2hpspJBCRYFkCghzCmwgZHtoYn/2nd1nOLsTt7jqMlvAKJSaLCrhz1HCTCTA==}
+  '@nomicfoundation/edr-linux-arm64-gnu@0.22.0':
+    resolution: {integrity: sha512-xAzNojRkCJMdCpmJtdwqumMT7jExVlR2zBBAmL6Ibco63AZaTtxTtEI+LIMVbjJGgkmIgx1p/1KOPHaAMfNSVw==}
     engines: {node: '>= 22'}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
 
-  '@nomicfoundation/edr-linux-arm64-musl@0.19.0':
-    resolution: {integrity: sha512-mlkpVUolkSpMIriZyiJeTbgx/m4Ngm9lQtah2BG92H+dgtwMIMze6Q6OQfZG6oi6wMrhDgu8WEyAy3XgIwlcRg==}
+  '@nomicfoundation/edr-linux-arm64-musl@0.22.0':
+    resolution: {integrity: sha512-exgirWkwQAkQdnjS5w1lwA6p0fG1Z7fce5OgWSL0YzxfI9yUkBIoC4XoyUCCqYhB1Mr/9KXmsI4JDPG2U/2H6g==}
     engines: {node: '>= 22'}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
 
-  '@nomicfoundation/edr-linux-x64-gnu@0.19.0':
-    resolution: {integrity: sha512-d0Z+WVbX5mm6s9ozc5TXrCRjQykdN81tGI+eaM4hQcD/S5VSY9rwKuCXyLJ/GkgeI5S8HEHsyVdXEsDJznPyhA==}
+  '@nomicfoundation/edr-linux-x64-gnu@0.22.0':
+    resolution: {integrity: sha512-oYbYDXYIof+/ZKegmwxugGYhoGfnVFLrVqxmW0po9KETuUnNBg7hKn9SzlOLRAIQGoKUUUfiBjvZdp1gzHKMWQ==}
     engines: {node: '>= 22'}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
 
-  '@nomicfoundation/edr-linux-x64-musl@0.19.0':
-    resolution: {integrity: sha512-UIrlNqYj9lbUXpBy++WwHeC0xZqyFw9TXy06/8+0PLffI7Si4kiTKfXqdITGQhP6Vf/JuJ8y+jos8oy6bL8jFQ==}
+  '@nomicfoundation/edr-linux-x64-musl@0.22.0':
+    resolution: {integrity: sha512-DbF/kG49FNfRO4x7qSYFZlIHg3txqq5j06VTRqRG3r+j/C4HXgHG3InlWr5bElKXt+7LGkX57FQAORmSU8/v+A==}
     engines: {node: '>= 22'}
     cpu: [x64]
     os: [linux]
     libc: [musl]
 
-  '@nomicfoundation/edr-win32-x64-msvc@0.19.0':
-    resolution: {integrity: sha512-pIyEJBiS8l09Yndz+aE/JmkD39FCqtyiRO+wlx6tX426o4290acRfJ0r7GwTBmqqZD5G4pLOOB0uLIMRyDrY+g==}
+  '@nomicfoundation/edr-win32-x64-msvc@0.22.0':
+    resolution: {integrity: sha512-fKqT26zGwnISIYvJcY/yINfyaKMZKLxg2eNpLij752Hl75552ysOo8+SkADd/q5J9DXdFryNJ+CFOXCDKWJ/Ig==}
     engines: {node: '>= 22'}
     cpu: [x64]
     os: [win32]
 
-  '@nomicfoundation/edr@0.19.0':
-    resolution: {integrity: sha512-wzuyAylm4XWIahFjy1pFDQfHny4Xsx73T98d8KJAkGG/Rpgp0M36rqS4lzjbGQ1tXDrWEBG0WRr0v1jrQhQ0xg==}
+  '@nomicfoundation/edr@0.22.0':
+    resolution: {integrity: sha512-m/RS577AIDg1TMOwGmH8edeiwa6UE1RQnzniUHQJXVHOu40tMexmLNIqaaI0KL0EgoJtYS3/4kz3gzaRGKExyw==}
     engines: {node: '>= 22'}
 
   '@nomicfoundation/hardhat-errors@3.0.21':
     resolution: {integrity: sha512-jXgqgxmI1D7vYcWRQnb6HsRDssxE87a4xJ48FQAdkZUPclB0aVISx6IoVG1Kttx2jJ7tNuo9GasJxpOv7stqyg==}
+
+  '@nomicfoundation/hardhat-errors@3.1.1':
+    resolution: {integrity: sha512-NeI8Ze1DsR8PE/Gm4syf3rNaiBw7Mioq3ZMw+6+/SJuNM1epA4RG2pz+06Pg0GUe4sCuuayZw30Fr1YWjF2vYA==}
 
   '@nomicfoundation/hardhat-ethers-chai-matchers@3.0.11':
     resolution: {integrity: sha512-pAOTjBQRNKqCh8cLJD6dsOeGWrU8fe9Wrz4UqO03qhJbwmj0md2bq2LEPaMZAgDtxVS0ZteiVGx64DgBfyb7XA==}
@@ -615,6 +634,9 @@ packages:
 
   '@nomicfoundation/hardhat-utils@4.1.9':
     resolution: {integrity: sha512-vUyHQ2H1VfknTUxO3Vat7z0y9WkDUF69pLrrLZN2K1/+TKJN+TVzEMeXW/2GXJzIhm2uc2qZXOYwQUh+SU9PbQ==}
+
+  '@nomicfoundation/hardhat-utils@4.4.0':
+    resolution: {integrity: sha512-fRaVVbPs+Az7K3B40x8jlPDM4o7jfgoTMpxNXjg2JrpxORKqQtf9YSv9HN9lZKFZecLIYwHT3U9RQEOrZBkAEQ==}
 
   '@nomicfoundation/hardhat-vendored@3.0.4':
     resolution: {integrity: sha512-RO8Otj1FvRvxJmXzkxh1vTwK/+cqSVPYLqY6RrWkmzHEEcxnAwAFsBYdW7xyTEyW/pVbSSNd2gs3aoGdGZaoNA==}
@@ -695,11 +717,20 @@ packages:
   '@scure/base@1.2.6':
     resolution: {integrity: sha512-g/nm5FgUa//MCj1gV09zTJTaM6KBAHqLN907YVQqf7zC49+DcO4B1so4ZX07Ef10Twr6nuqYEH9GEggFXA4Fmg==}
 
+  '@scure/base@2.2.0':
+    resolution: {integrity: sha512-b8XEupJibegiXV+tDUseI8oLQc8ei3d/4Jkb2RpbHh3MfE054ov3uIz2dhFkB3FI8iwYkEh0gGCApkrYggkPNg==}
+
   '@scure/bip32@1.4.0':
     resolution: {integrity: sha512-sVUpc0Vq3tXCkDGYVWGIZTRfnvu8LoTDaev7vbwh0omSvVORONr960MQWdKqJDCReIEmTj3PAr73O3aoxz7OPg==}
 
+  '@scure/bip32@1.7.0':
+    resolution: {integrity: sha512-E4FFX/N3f4B80AKWp5dP6ow+flD1LQZo/w8UnLGYZO674jS6YnYeepycOOksv+vLPSpgN35wgKgy+ybfTb2SMw==}
+
   '@scure/bip39@1.3.0':
     resolution: {integrity: sha512-disdg7gHuTDZtY+ZdkmLpPCk7fxZSu3gBiEGuoC1XYxv9cGx3Z6cpTggCgW6odSOOIXCiDjuGejW+aJKCY/pIQ==}
+
+  '@scure/bip39@1.6.0':
+    resolution: {integrity: sha512-+lF0BbLiJNwVlev4eKelw1WWLaiKXw7sSl8T6FvBlWkdX+94aGJ4o8XjUdlyhTCjd8c+B3KT3JfS8P0bLRNU6A==}
 
   '@sentry/core@9.47.1':
     resolution: {integrity: sha512-KX62+qIt4xgy8eHKHiikfhz2p5fOciXd0Cl+dNzhgPFq8klq4MGMNaf148GB3M/vBqP4nw/eFvRMAayFCgdRQw==}
@@ -715,8 +746,14 @@ packages:
   '@streamparser/json-node@0.0.22':
     resolution: {integrity: sha512-sJT2ptNRwqB1lIsQrQlCoWk5rF4tif9wDh+7yluAGijJamAhrHGYpFB/Zg3hJeceoZypi74ftXk8DHzwYpbZSg==}
 
+  '@streamparser/json-node@0.0.26':
+    resolution: {integrity: sha512-9OxH3oyILbxiHxNfhvfVpyWgaiLDxreWLk6t6xdSZxJlzKciXReMN6w446+lu+cgdpJxJlwNoyfBLPtTrCUJgA==}
+
   '@streamparser/json@0.0.22':
     resolution: {integrity: sha512-b6gTSBjJ8G8SuO3Gbbj+zXbVx8NSs1EbpbMKpzGLWMdkR+98McH9bEjSz3+0mPJf68c5nxa3CrJHp5EQNXM6zQ==}
+
+  '@streamparser/json@0.0.26':
+    resolution: {integrity: sha512-46597LNFI+MFdUnzX2QJWwmdTRdq0XVD+vVNJTtGVzIrnCuhG9pFo1OAzbNBqci8UJgk/X5KJZ6LcV+y7PTuDQ==}
 
   '@szmarczak/http-timer@5.0.1':
     resolution: {integrity: sha512-+PmQX0PiAYPMeVYe237LJAYvOMYW1j2rH5YROyS3b4CTVJum34HfRvKvAzozHAQG0TnHNdUfY9nCeUyRAs//cw==}
@@ -1141,6 +1178,10 @@ packages:
   ethereum-cryptography@2.2.1:
     resolution: {integrity: sha512-r/W8lkHSiTLxUxW8Rf3u4HGB0xQweG2RyETjywylKZSzLWoWAijRz8WCuOtJ6wah+avllXBqZuk29HCCvhEIRg==}
 
+  ethereum-cryptography@3.2.0:
+    resolution: {integrity: sha512-Urr5YVsalH+Jo0sYkTkv1MyI9bLYZwW8BENZCeE1QYaTHETEYx0Nv/SVsWkSqpYrzweg6d8KMY1wTjH/1m/BIg==}
+    engines: {node: ^14.21.3 || >=16, npm: '>=9'}
+
   ethers@6.17.0:
     resolution: {integrity: sha512-BpyrpIPJ3ydEVow8zGaz1DuPS7YU8DcWxuBnY9a0UA/lvAPwrMr+EPXsfrul628SRaekPNeIM4UFh/91GWZang==}
     engines: {node: '>=14.0.0'}
@@ -1225,8 +1266,8 @@ packages:
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
 
-  hardhat@3.16.0:
-    resolution: {integrity: sha512-LWFFR3rYl8AIhwpYVjK2L5y0Z0CqdQFQ8AZWe8gqf1t7KGH+E/EguoIX7rcB4KfyKoWK6ooj+7Jgba4vlQ1feQ==}
+  hardhat@3.18.1:
+    resolution: {integrity: sha512-40fn/HILjKyV6saNp7VMU+NAeE0ya9RwryEXOo+vu8/TCE7tbj2WNTcJgiLP5Ws5Dty08p75xGEQzyFjkfUqZQ==}
     hasBin: true
 
   has-flag@3.0.0:
@@ -1391,11 +1432,13 @@ packages:
     resolution: {integrity: sha512-4pfM1Ff0x50o0tQwb5ucw/RzNyD0/YJME6IVcStalZuMWxdt3sR3huStTtxz4PUmvZfRguvDejasvQ2kifR11g==}
     engines: {node: 20 || >=22}
 
-  micro-eth-signer@0.14.0:
-    resolution: {integrity: sha512-5PLLzHiVYPWClEvZIXXFu5yutzpadb73rnQCpUqIHu3No3coFuWQNfE5tkBQJ7djuLYl6aRLaS0MgWJYGoqiBw==}
+  micro-eth-signer@0.19.0:
+    resolution: {integrity: sha512-vgij8q88ZMcTvWDnOy76htaneQqagvU7FYjvtxUCeQJT2iTjYCHMzw46ArybKJNZICQ8W8qUFhI9CXWCePd9uQ==}
+    engines: {node: '>= 20.19.0'}
 
-  micro-packed@0.7.3:
-    resolution: {integrity: sha512-2Milxs+WNC00TRlem41oRswvw31146GiSaoCT7s3Xi2gMUglW5QBeqlQaZeHr5tJx9nm3i57LNXPqxOOaWtTYg==}
+  micro-packed@0.9.0:
+    resolution: {integrity: sha512-gFdaWTxEXOwtSOcpxulO4AuXVtp3HWIRmB8eq8+3m1Zku0ubgva0UGpi03YhcvsTJasHngG9gTIUK5kHNKdesg==}
+    engines: {node: '>= 20.19.0'}
 
   mimic-response@3.1.0:
     resolution: {integrity: sha512-z0yWI+4FDrrweS8Zmt4Ej5HdJmky15+L2e6Wgn3+iK5fWzb6T3fhNFq2+MeTRb064c6Wr4N/wv0DzQTjNzHNGQ==}
@@ -1740,6 +1783,10 @@ packages:
     resolution: {integrity: sha512-zWpdTVD54H48CIybL0rWQ3ukpb9d23wM7eH5RtfdmeP70cWHNjtfo7P4vZX+5CoDcO53J4Pu5uXp7lNfjc6DRA==}
     engines: {node: '>=18.17'}
 
+  undici@7.30.0:
+    resolution: {integrity: sha512-dkrQXeHSaoamnItlYbmzG0wFYrM0ZwDxCIg0A7aKjTyyhh9svRzCNFEzV+Vm05/yehjCzjDZ31KXfGEjYSztDQ==}
+    engines: {node: '>=20.18.1'}
+
   universalify@0.1.2:
     resolution: {integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==}
     engines: {node: '>= 4.0.0'}
@@ -2047,6 +2094,10 @@ snapshots:
 
   '@noble/ciphers@1.2.1': {}
 
+  '@noble/ciphers@1.3.0': {}
+
+  '@noble/ciphers@2.2.0': {}
+
   '@noble/curves@1.2.0':
     dependencies:
       '@noble/hashes': 1.3.2
@@ -2055,9 +2106,13 @@ snapshots:
     dependencies:
       '@noble/hashes': 1.4.0
 
-  '@noble/curves@1.8.2':
+  '@noble/curves@1.9.0':
     dependencies:
-      '@noble/hashes': 1.7.2
+      '@noble/hashes': 1.8.0
+
+  '@noble/curves@2.2.0':
+    dependencies:
+      '@noble/hashes': 2.2.0
 
   '@noble/hashes@1.3.2': {}
 
@@ -2065,143 +2120,149 @@ snapshots:
 
   '@noble/hashes@1.7.1': {}
 
-  '@noble/hashes@1.7.2': {}
+  '@noble/hashes@1.8.0': {}
 
-  '@nomicfoundation/edr-darwin-arm64@0.19.0':
+  '@noble/hashes@2.2.0': {}
+
+  '@nomicfoundation/edr-darwin-arm64@0.22.0':
     optional: true
 
-  '@nomicfoundation/edr-darwin-x64@0.19.0':
+  '@nomicfoundation/edr-darwin-x64@0.22.0':
     optional: true
 
-  '@nomicfoundation/edr-linux-arm64-gnu@0.19.0':
+  '@nomicfoundation/edr-linux-arm64-gnu@0.22.0':
     optional: true
 
-  '@nomicfoundation/edr-linux-arm64-musl@0.19.0':
+  '@nomicfoundation/edr-linux-arm64-musl@0.22.0':
     optional: true
 
-  '@nomicfoundation/edr-linux-x64-gnu@0.19.0':
+  '@nomicfoundation/edr-linux-x64-gnu@0.22.0':
     optional: true
 
-  '@nomicfoundation/edr-linux-x64-musl@0.19.0':
+  '@nomicfoundation/edr-linux-x64-musl@0.22.0':
     optional: true
 
-  '@nomicfoundation/edr-win32-x64-msvc@0.19.0':
+  '@nomicfoundation/edr-win32-x64-msvc@0.22.0':
     optional: true
 
-  '@nomicfoundation/edr@0.19.0':
+  '@nomicfoundation/edr@0.22.0':
     optionalDependencies:
-      '@nomicfoundation/edr-darwin-arm64': 0.19.0
-      '@nomicfoundation/edr-darwin-x64': 0.19.0
-      '@nomicfoundation/edr-linux-arm64-gnu': 0.19.0
-      '@nomicfoundation/edr-linux-arm64-musl': 0.19.0
-      '@nomicfoundation/edr-linux-x64-gnu': 0.19.0
-      '@nomicfoundation/edr-linux-x64-musl': 0.19.0
-      '@nomicfoundation/edr-win32-x64-msvc': 0.19.0
+      '@nomicfoundation/edr-darwin-arm64': 0.22.0
+      '@nomicfoundation/edr-darwin-x64': 0.22.0
+      '@nomicfoundation/edr-linux-arm64-gnu': 0.22.0
+      '@nomicfoundation/edr-linux-arm64-musl': 0.22.0
+      '@nomicfoundation/edr-linux-x64-gnu': 0.22.0
+      '@nomicfoundation/edr-linux-x64-musl': 0.22.0
+      '@nomicfoundation/edr-win32-x64-msvc': 0.22.0
 
   '@nomicfoundation/hardhat-errors@3.0.21':
     dependencies:
       '@nomicfoundation/hardhat-utils': 4.1.9
 
-  '@nomicfoundation/hardhat-ethers-chai-matchers@3.0.11(@nomicfoundation/hardhat-ethers@4.0.15(hardhat@3.16.0))(chai@6.2.2)(ethers@6.17.0)(hardhat@3.16.0)':
+  '@nomicfoundation/hardhat-errors@3.1.1':
     dependencies:
-      '@nomicfoundation/hardhat-ethers': 4.0.15(hardhat@3.16.0)
+      '@nomicfoundation/hardhat-utils': 4.4.0
+
+  '@nomicfoundation/hardhat-ethers-chai-matchers@3.0.11(@nomicfoundation/hardhat-ethers@4.0.15(hardhat@3.18.1))(chai@6.2.2)(ethers@6.17.0)(hardhat@3.18.1)':
+    dependencies:
+      '@nomicfoundation/hardhat-ethers': 4.0.15(hardhat@3.18.1)
       '@nomicfoundation/hardhat-utils': 4.1.9
       '@types/chai-as-promised': 8.0.2
       chai: 6.2.2
       chai-as-promised: 8.0.2(chai@6.2.2)
       deep-eql: 5.0.2
       ethers: 6.17.0
-      hardhat: 3.16.0
+      hardhat: 3.18.1
 
-  '@nomicfoundation/hardhat-ethers@4.0.15(hardhat@3.16.0)':
+  '@nomicfoundation/hardhat-ethers@4.0.15(hardhat@3.18.1)':
     dependencies:
       '@nomicfoundation/hardhat-errors': 3.0.21
       '@nomicfoundation/hardhat-utils': 4.1.9
       '@nomicfoundation/hardhat-zod-utils': 3.0.6(zod@3.25.76)
       ethereum-cryptography: 2.2.1
       ethers: 6.17.0
-      hardhat: 3.16.0
+      hardhat: 3.18.1
       zod: 3.25.76
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
 
-  '@nomicfoundation/hardhat-ignition-ethers@3.1.6(@nomicfoundation/hardhat-ethers@4.0.15(hardhat@3.16.0))(@nomicfoundation/hardhat-ignition@3.1.8(@nomicfoundation/hardhat-verify@3.1.0(hardhat@3.16.0))(hardhat@3.16.0))(@nomicfoundation/hardhat-verify@3.1.0(hardhat@3.16.0))(@nomicfoundation/ignition-core@3.1.9)(ethers@6.17.0)(hardhat@3.16.0)':
+  '@nomicfoundation/hardhat-ignition-ethers@3.1.6(@nomicfoundation/hardhat-ethers@4.0.15(hardhat@3.18.1))(@nomicfoundation/hardhat-ignition@3.1.8(@nomicfoundation/hardhat-verify@3.1.0(hardhat@3.18.1))(hardhat@3.18.1))(@nomicfoundation/hardhat-verify@3.1.0(hardhat@3.18.1))(@nomicfoundation/ignition-core@3.1.9)(ethers@6.17.0)(hardhat@3.18.1)':
     dependencies:
       '@nomicfoundation/hardhat-errors': 3.0.21
-      '@nomicfoundation/hardhat-ethers': 4.0.15(hardhat@3.16.0)
-      '@nomicfoundation/hardhat-ignition': 3.1.8(@nomicfoundation/hardhat-verify@3.1.0(hardhat@3.16.0))(hardhat@3.16.0)
-      '@nomicfoundation/hardhat-verify': 3.1.0(hardhat@3.16.0)
+      '@nomicfoundation/hardhat-ethers': 4.0.15(hardhat@3.18.1)
+      '@nomicfoundation/hardhat-ignition': 3.1.8(@nomicfoundation/hardhat-verify@3.1.0(hardhat@3.18.1))(hardhat@3.18.1)
+      '@nomicfoundation/hardhat-verify': 3.1.0(hardhat@3.18.1)
       '@nomicfoundation/ignition-core': 3.1.9
       ethers: 6.17.0
-      hardhat: 3.16.0
+      hardhat: 3.18.1
 
-  '@nomicfoundation/hardhat-ignition@3.1.8(@nomicfoundation/hardhat-verify@3.1.0(hardhat@3.16.0))(hardhat@3.16.0)':
+  '@nomicfoundation/hardhat-ignition@3.1.8(@nomicfoundation/hardhat-verify@3.1.0(hardhat@3.18.1))(hardhat@3.18.1)':
     dependencies:
       '@nomicfoundation/hardhat-errors': 3.0.21
       '@nomicfoundation/hardhat-utils': 4.1.9
-      '@nomicfoundation/hardhat-verify': 3.1.0(hardhat@3.16.0)
+      '@nomicfoundation/hardhat-verify': 3.1.0(hardhat@3.18.1)
       '@nomicfoundation/ignition-core': 3.1.9
       '@nomicfoundation/ignition-ui': 3.1.2
-      hardhat: 3.16.0
+      hardhat: 3.18.1
       json5: 2.2.3
       prompts: 2.4.2
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
 
-  '@nomicfoundation/hardhat-keystore@3.0.13(hardhat@3.16.0)':
+  '@nomicfoundation/hardhat-keystore@3.0.13(hardhat@3.18.1)':
     dependencies:
       '@noble/ciphers': 1.2.1
       '@noble/hashes': 1.7.1
       '@nomicfoundation/hardhat-errors': 3.0.21
       '@nomicfoundation/hardhat-utils': 4.1.9
       '@nomicfoundation/hardhat-zod-utils': 3.0.6(zod@3.25.76)
-      hardhat: 3.16.0
+      hardhat: 3.18.1
       zod: 3.25.76
 
-  '@nomicfoundation/hardhat-mocha@3.1.0(hardhat@3.16.0)(mocha@11.8.0)':
+  '@nomicfoundation/hardhat-mocha@3.1.0(hardhat@3.18.1)(mocha@11.8.0)':
     dependencies:
       '@nomicfoundation/hardhat-errors': 3.0.21
       '@nomicfoundation/hardhat-utils': 4.1.9
       '@nomicfoundation/hardhat-zod-utils': 3.0.6(zod@3.25.76)
-      hardhat: 3.16.0
+      hardhat: 3.18.1
       mocha: 11.8.0
       tsx: 4.23.13
       zod: 3.25.76
 
-  '@nomicfoundation/hardhat-network-helpers@3.0.11(hardhat@3.16.0)':
+  '@nomicfoundation/hardhat-network-helpers@3.0.11(hardhat@3.18.1)':
     dependencies:
       '@nomicfoundation/hardhat-errors': 3.0.21
       '@nomicfoundation/hardhat-utils': 4.1.9
-      hardhat: 3.16.0
+      hardhat: 3.18.1
 
-  '@nomicfoundation/hardhat-toolbox-mocha-ethers@3.0.7(7386eeacfc05906dce3df36e360779c9)':
+  '@nomicfoundation/hardhat-toolbox-mocha-ethers@3.0.7(ba6b52f0d5bd2c94700604715cdaa793)':
     dependencies:
-      '@nomicfoundation/hardhat-ethers': 4.0.15(hardhat@3.16.0)
-      '@nomicfoundation/hardhat-ethers-chai-matchers': 3.0.11(@nomicfoundation/hardhat-ethers@4.0.15(hardhat@3.16.0))(chai@6.2.2)(ethers@6.17.0)(hardhat@3.16.0)
-      '@nomicfoundation/hardhat-ignition': 3.1.8(@nomicfoundation/hardhat-verify@3.1.0(hardhat@3.16.0))(hardhat@3.16.0)
-      '@nomicfoundation/hardhat-ignition-ethers': 3.1.6(@nomicfoundation/hardhat-ethers@4.0.15(hardhat@3.16.0))(@nomicfoundation/hardhat-ignition@3.1.8(@nomicfoundation/hardhat-verify@3.1.0(hardhat@3.16.0))(hardhat@3.16.0))(@nomicfoundation/hardhat-verify@3.1.0(hardhat@3.16.0))(@nomicfoundation/ignition-core@3.1.9)(ethers@6.17.0)(hardhat@3.16.0)
-      '@nomicfoundation/hardhat-keystore': 3.0.13(hardhat@3.16.0)
-      '@nomicfoundation/hardhat-mocha': 3.1.0(hardhat@3.16.0)(mocha@11.8.0)
-      '@nomicfoundation/hardhat-network-helpers': 3.0.11(hardhat@3.16.0)
-      '@nomicfoundation/hardhat-typechain': 3.1.1(@nomicfoundation/hardhat-ethers@4.0.15(hardhat@3.16.0))(ethers@6.17.0)(hardhat@3.16.0)(supports-color@8.1.1)(typescript@7.0.2)
-      '@nomicfoundation/hardhat-verify': 3.1.0(hardhat@3.16.0)
+      '@nomicfoundation/hardhat-ethers': 4.0.15(hardhat@3.18.1)
+      '@nomicfoundation/hardhat-ethers-chai-matchers': 3.0.11(@nomicfoundation/hardhat-ethers@4.0.15(hardhat@3.18.1))(chai@6.2.2)(ethers@6.17.0)(hardhat@3.18.1)
+      '@nomicfoundation/hardhat-ignition': 3.1.8(@nomicfoundation/hardhat-verify@3.1.0(hardhat@3.18.1))(hardhat@3.18.1)
+      '@nomicfoundation/hardhat-ignition-ethers': 3.1.6(@nomicfoundation/hardhat-ethers@4.0.15(hardhat@3.18.1))(@nomicfoundation/hardhat-ignition@3.1.8(@nomicfoundation/hardhat-verify@3.1.0(hardhat@3.18.1))(hardhat@3.18.1))(@nomicfoundation/hardhat-verify@3.1.0(hardhat@3.18.1))(@nomicfoundation/ignition-core@3.1.9)(ethers@6.17.0)(hardhat@3.18.1)
+      '@nomicfoundation/hardhat-keystore': 3.0.13(hardhat@3.18.1)
+      '@nomicfoundation/hardhat-mocha': 3.1.0(hardhat@3.18.1)(mocha@11.8.0)
+      '@nomicfoundation/hardhat-network-helpers': 3.0.11(hardhat@3.18.1)
+      '@nomicfoundation/hardhat-typechain': 3.1.1(@nomicfoundation/hardhat-ethers@4.0.15(hardhat@3.18.1))(ethers@6.17.0)(hardhat@3.18.1)(supports-color@8.1.1)(typescript@7.0.2)
+      '@nomicfoundation/hardhat-verify': 3.1.0(hardhat@3.18.1)
       '@nomicfoundation/ignition-core': 3.1.9
       chai: 6.2.2
       ethers: 6.17.0
-      hardhat: 3.16.0
+      hardhat: 3.18.1
       mocha: 11.8.0
 
-  '@nomicfoundation/hardhat-typechain@3.1.1(@nomicfoundation/hardhat-ethers@4.0.15(hardhat@3.16.0))(ethers@6.17.0)(hardhat@3.16.0)(supports-color@8.1.1)(typescript@7.0.2)':
+  '@nomicfoundation/hardhat-typechain@3.1.1(@nomicfoundation/hardhat-ethers@4.0.15(hardhat@3.18.1))(ethers@6.17.0)(hardhat@3.18.1)(supports-color@8.1.1)(typescript@7.0.2)':
     dependencies:
       '@nomicfoundation/hardhat-errors': 3.0.21
-      '@nomicfoundation/hardhat-ethers': 4.0.15(hardhat@3.16.0)
+      '@nomicfoundation/hardhat-ethers': 4.0.15(hardhat@3.18.1)
       '@nomicfoundation/hardhat-utils': 4.1.9
       '@nomicfoundation/hardhat-zod-utils': 3.0.6(zod@3.25.76)
       '@typechain/ethers-v6': 0.5.1(ethers@6.17.0)(typechain@8.3.2(supports-color@8.1.1)(typescript@7.0.2))(typescript@7.0.2)
       ethers: 6.17.0
-      hardhat: 3.16.0
+      hardhat: 3.18.1
       typechain: 8.3.2(supports-color@8.1.1)(typescript@7.0.2)
       zod: 3.25.76
     transitivePeerDependencies:
@@ -2218,16 +2279,27 @@ snapshots:
       rfdc: 1.4.1
       undici: 6.28.1
 
+  '@nomicfoundation/hardhat-utils@4.4.0':
+    dependencies:
+      '@streamparser/json-node': 0.0.26
+      env-paths: 4.0.0
+      ethereum-cryptography: 3.2.0
+      fast-equals: 6.0.3
+      json-stream-stringify: 3.1.7
+      micro-eth-signer: 0.19.0
+      rfdc: 1.4.1
+      undici: 7.30.0
+
   '@nomicfoundation/hardhat-vendored@3.0.4': {}
 
-  '@nomicfoundation/hardhat-verify@3.1.0(hardhat@3.16.0)':
+  '@nomicfoundation/hardhat-verify@3.1.0(hardhat@3.18.1)':
     dependencies:
       '@ethersproject/abi': 5.8.0
       '@nomicfoundation/hardhat-errors': 3.0.21
       '@nomicfoundation/hardhat-utils': 4.1.9
       '@nomicfoundation/hardhat-zod-utils': 3.0.6(zod@3.25.76)
       cbor2: 2.3.0
-      hardhat: 3.16.0
+      hardhat: 3.18.1
       zod: 3.25.76
 
   '@nomicfoundation/hardhat-zod-utils@3.0.6(zod@3.25.76)':
@@ -2309,16 +2381,29 @@ snapshots:
 
   '@scure/base@1.2.6': {}
 
+  '@scure/base@2.2.0': {}
+
   '@scure/bip32@1.4.0':
     dependencies:
       '@noble/curves': 1.4.2
       '@noble/hashes': 1.4.0
       '@scure/base': 1.1.9
 
+  '@scure/bip32@1.7.0':
+    dependencies:
+      '@noble/curves': 1.9.0
+      '@noble/hashes': 1.8.0
+      '@scure/base': 1.2.6
+
   '@scure/bip39@1.3.0':
     dependencies:
       '@noble/hashes': 1.4.0
       '@scure/base': 1.1.9
+
+  '@scure/bip39@1.6.0':
+    dependencies:
+      '@noble/hashes': 1.8.0
+      '@scure/base': 1.2.6
 
   '@sentry/core@9.47.1': {}
 
@@ -2330,7 +2415,13 @@ snapshots:
     dependencies:
       '@streamparser/json': 0.0.22
 
+  '@streamparser/json-node@0.0.26':
+    dependencies:
+      '@streamparser/json': 0.0.26
+
   '@streamparser/json@0.0.22': {}
+
+  '@streamparser/json@0.0.26': {}
 
   '@szmarczak/http-timer@5.0.1':
     dependencies:
@@ -2699,6 +2790,14 @@ snapshots:
       '@scure/bip32': 1.4.0
       '@scure/bip39': 1.3.0
 
+  ethereum-cryptography@3.2.0:
+    dependencies:
+      '@noble/ciphers': 1.3.0
+      '@noble/curves': 1.9.0
+      '@noble/hashes': 1.8.0
+      '@scure/bip32': 1.7.0
+      '@scure/bip39': 1.6.0
+
   ethers@6.17.0:
     dependencies:
       '@adraffy/ens-normalize': 1.11.1
@@ -2797,11 +2896,11 @@ snapshots:
 
   graceful-fs@4.2.11: {}
 
-  hardhat@3.16.0:
+  hardhat@3.18.1:
     dependencies:
-      '@nomicfoundation/edr': 0.19.0
-      '@nomicfoundation/hardhat-errors': 3.0.21
-      '@nomicfoundation/hardhat-utils': 4.1.9
+      '@nomicfoundation/edr': 0.22.0
+      '@nomicfoundation/hardhat-errors': 3.1.1
+      '@nomicfoundation/hardhat-utils': 4.4.0
       '@nomicfoundation/hardhat-vendored': 3.0.4
       '@nomicfoundation/hardhat-zod-utils': 3.0.6(zod@3.25.76)
       '@nomicfoundation/solidity-analyzer': 0.1.2
@@ -2809,8 +2908,8 @@ snapshots:
       adm-zip: 0.6.1
       chokidar: 5.0.0
       enquirer: 2.4.1
-      ethereum-cryptography: 2.2.1
-      micro-eth-signer: 0.14.0
+      ethereum-cryptography: 3.2.0
+      micro-eth-signer: 0.19.0
       p-map: 7.0.8
       resolve.exports: 2.0.3
       semver: 7.8.5
@@ -2946,15 +3045,16 @@ snapshots:
 
   lru-cache@11.5.2: {}
 
-  micro-eth-signer@0.14.0:
+  micro-eth-signer@0.19.0:
     dependencies:
-      '@noble/curves': 1.8.2
-      '@noble/hashes': 1.7.2
-      micro-packed: 0.7.3
+      '@noble/ciphers': 2.2.0
+      '@noble/curves': 2.2.0
+      '@noble/hashes': 2.2.0
+      micro-packed: 0.9.0
 
-  micro-packed@0.7.3:
+  micro-packed@0.9.0:
     dependencies:
-      '@scure/base': 1.2.6
+      '@scure/base': 2.2.0
 
   mimic-response@3.1.0: {}
 
@@ -3325,6 +3425,8 @@ snapshots:
   undici-types@8.9.0: {}
 
   undici@6.28.1: {}
+
+  undici@7.30.0: {}
 
   universalify@0.1.2: {}
 
